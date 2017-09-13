@@ -6,7 +6,7 @@
 #' @import magrittr
 
 
-common = read.csv("D:/things/R/ibuzz/common_170906.csv",header=T, encoding = "big5") %>% dataprocess()
+common = data(common) %>% dataprocess()
 for(i in 1:length(common)){
   c = common[i] %>% unlist
   c = c[!is.na(c)]
